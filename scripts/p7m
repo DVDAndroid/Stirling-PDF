@@ -51,7 +51,7 @@ XSL_OLD_TIME_SEC=1296000
 # ------------------------------------------------------------------------
 
 declare -a msgKey msgVal msgVal_it msgVal_en
-declare -a msgKeyTitle msgValTitle_it msgValTitle_en 
+declare -a msgKeyTitle msgValTitle_it msgValTitle_en
 declare -a msgKeyError msgValError_it msgValError_en
 declare -a msgKeyOpenssl msgValOpenssl_it msgValOpenssl_en
 declare -a msgKeyExec msgValExec_it msgValExec_en
@@ -69,11 +69,11 @@ msgValError_en=("You must pass a .p7m file as a parameter" "Bad file p7m format.
 
 msgKeyOpenssl=("openssl:estrazione:errore" "openssl:verifica:errore:formato" "openssl:verifica:title:ok" "openssl:verifica:title:non_ok" "openssl:verifica:ok:ok" "openssl:verifica:non_ok:ok" "openssl:verifica:non_ok_scaduto:ok" "openssl:verifica:non_ok_scaduto:non_ok" "openssl:verifica:non_ok:non_ok" "openssl:verifica:errore:continuo" "openssl:verifica:timestamp:mancante" "openssl:cert:errore" "openssl:cert:validita" "openssl:asn1parse:error" "openssl:asn1parse:timestamp" "openssl:estrazione:percorso")
 msgValOpenssl_it=(
-"estrazione file terminata con errore" 
-"Errore nel formato del file" 
-"Verifica firme avvenuta con successo" 
-"Verifica firme terminata con errore" 
-"**Firmatario: %s**\n   Data e ora di firma: %p1\n   Ente: %p2\n   CF: %p3\n   Certificatore: %p4\n   Validità certificato: %p5 - %p6\n" 
+"estrazione file terminata con errore"
+"Errore nel formato del file"
+"Verifica firme avvenuta con successo"
+"Verifica firme terminata con errore"
+"**Firmatario: %s**\n   Data e ora di firma: %p1\n   Ente: %p2\n   CF: %p3\n   Certificatore: %p4\n   Validità certificato: %p5 - %p6\n"
 "**Firmatario: %s**\n   Data e ora di firma: %p1\n   Ente: %p2\n   CF: %p3\n   Certificatore: %p4\n   ** Certificato non valido: %p5 - %p6\n"
 "**Firmatario: %s**\n   Data e ora di firma: %p1\n   Ente: %p2\n   CF: %p3\n   Certificatore: %p4\n   ***Certificato scaduto: %p5 - %p6***\n"
 "**Firmatario: %s**\n   *** Errore in data e ora di firma: %p1***\n   Ente: %p2\n   CF: %p3\n   Certificatore: %p4\n   *** Certificato scaduto: %p5 - %p6***\n"
@@ -91,7 +91,7 @@ msgValOpenssl_en=(
 "File format error"
 "Signature verified correctly"
 "Signature verification failed"
-"**Signer: %s**\n   Date and time of signature: %p1\n   Organization: %p2\n   CF: %p3\n   Issuer: %p4\n   Certificate validity: %p5 - %p6\n" 
+"**Signer: %s**\n   Date and time of signature: %p1\n   Organization: %p2\n   CF: %p3\n   Issuer: %p4\n   Certificate validity: %p5 - %p6\n"
 "**Signer: %s**\n   Date and time of signature: %p1\n   Organization: %p2\n   CF: %p3\n   Issuer: %p4\n   ** Invalid certificate: %p5 - %p6\n"
 "**Signer: %s**\n   Date and time of signature: %p1\n   Organization: %p2\n   CF: %p3\n   Issuer: %p4\n   ***Certificate expired: %p5 - %p6***\n"
 "**Signer: %s**\n   *** Error in date and time of signature: %p1***\n   Organization: %p2\n   CF: %p3\n   Issuer: %p4\n   *** Certificate expired: %p5 - %p6***\n"
@@ -109,21 +109,21 @@ msgValExec_it=(
 "Devi installare 'openssl' prima di poter usare questo programma"
 "Non trovo nessuno dei comandi:\n ${OPEN_ORDER}\nNon so come aprire il file estratto"
 "Nessun programma di download trovato! Impossibile continuare."
-) 
+)
 msgValExec_en=(
 "You must install openssl first"
 "Non trovo nessuno dei comandi:\n ${OPEN_ORDER}\nI don't know how to open the extracted file"
 "No download program found! It is not possible to continue."
 )
 
-msgKeyDownloadurl=("download_url:ca:ok" "download_url:ca:non_ok" "download_url:ca:mancante" "download_url:ca:attendi" "download_url") 
+msgKeyDownloadurl=("download_url:ca:ok" "download_url:ca:non_ok" "download_url:ca:mancante" "download_url:ca:attendi" "download_url")
 msgValDownloadurl_it=(
 "CA scaricato perfettamente in"
 "Impossibile scaricare il CA in questo momento ... riprovare successivamente"
 "Manca il CA, scaricarlo con l'opzione -p"
 "Inizio scaricamento CA ... attendi un attimo"
 "Inizio scaricamento %s ... attendi un attimo"
-) 
+)
 msgValDownloadurl_en=(
 "CA downloaded perfectly into"
 "Unable to download the 'CA' at this time ... try again later"
@@ -132,19 +132,19 @@ msgValDownloadurl_en=(
 "Starting download %s ... wait, please"
 )
 
-msgKeyFile=("file:diritti:scrittura" "file:diritti:scrittura:alternativa" "file:sovrascivere") 
+msgKeyFile=("file:diritti:scrittura" "file:diritti:scrittura:alternativa" "file:sovrascivere")
 msgValFile_it=(
 "Impossibile scrivere in "
 "Estratto comunque il file in "
 "Sovrascrivere il file "
-) 
+)
 msgValFile_en=(
 "Unable to write in "
 "Extract the file in "
 "Overwrite the file "
 )
 
-msgKeyUsage=("p7m:usage") 
+msgKeyUsage=("p7m:usage")
 msgValUsage_it=(
 "***%s***
 
@@ -164,7 +164,7 @@ Usare:
     **-d**: utili per il debug del p7m (per esperti);
     **-g**: prova ad utilizzare finestre grafiche invece di scrivere in console.
 "
-) 
+)
 msgValUsage_en=(
 "***%s***
 
@@ -238,7 +238,7 @@ for i in "${msgKeyUsage[@]}"; do
 done
 
 
-# P7MTYPE: 
+# P7MTYPE:
 #   smime: use openssl smime
 #   cms  : use new openssl cms
 # Inizialized calling getP7mType() function
@@ -272,14 +272,14 @@ get_msg_key() {
 # Description: Get 2 digit lang based on $LANG environment variable
 # Input params: <none>
 # Environment variables used: $LANG
-# Output: 2 digit lang (default "it") 
+# Output: 2 digit lang (default "it")
 # Return value: 0
 # --------------------------
 get_lang_message() {
 	local L
 	L=${LANG%.*}
 	L=${L%_*}
-	if [ "$L" = "C" ]; then 
+	if [ "$L" = "C" ]; then
 		L='en'
 	elif [ -z "$L" ]; then
 		L='it'
@@ -289,8 +289,8 @@ get_lang_message() {
 
 populate_msg() {
 	local m keys key val
-	if [ ${#msgVal[@]} -eq 0 ]; then 
-		if [ -z "$L" ];	then 
+	if [ ${#msgVal[@]} -eq 0 ]; then
+		if [ -z "$L" ];	then
 			L=$(get_lang_message)
 		fi
 		# we have to popolate it
@@ -310,7 +310,7 @@ populate_msg() {
 # _msg()
 # --------------------------
 # Description: Display the message with the right language associated with the tag passed as a parameter
-# Input params: 
+# Input params:
 #  $1: Key to obtain the phrase in the right language.
 #  $2, ..., $10: Dynamic Parameters to replace some phrases.
 # Global variables used: $msgVal
@@ -341,7 +341,7 @@ _msg() {
 # rotate_file()
 # --------------------------
 # Description: Rotate the file passed by parameter add to the name ".1", ".2", ... ".n" where "n" is at the most $ROTATE_NUMBER
-# Input params: 
+# Input params:
 #  $1: The file to rotate the name
 # Global variables used: $ROTATE_NUMBER
 # External commans used: seq, mv
@@ -352,7 +352,7 @@ rotate_file() {
 	local rotate=0
 	local r=''
 	local rr=''
-	if [ -z "$1" -o ! -f "$1" ]; then 
+	if [ -z "$1" -o ! -f "$1" ]; then
 		return
 	fi
 	rotate=$((${ROTATE_NUMBER} -1))
@@ -368,7 +368,7 @@ rotate_file() {
 # find_command()
 # --------------------------
 # Description: Check if the command passed as a parameter actually exists.
-# Input params: 
+# Input params:
 #  $1: command to verify
 # External commans used: which
 # Output: Complete command path or nothing if not existing.
@@ -394,7 +394,7 @@ find_command() {
 #   - the final extracted file must not be deleted;
 #   - the file must exist;
 #   - the file must be of the temporary type created by this script (must match "p7m_").
-# Input params: 
+# Input params:
 #  $1, ..., $n: Names of files to be deleted.
 # Global variables used: $p7m_attach, $file
 # External commans used: rm
@@ -415,7 +415,7 @@ del_oldtmp_file() {
 # --------------------------
 # Description: Download $1 url and save it as $2
 #   For download, either wget or curl or GET is used. The download log is located in ${CONF_DIR}/.dwn.log
-# Input params: 
+# Input params:
 #  $1: url to download
 #  $2: Name and path of downloaded url
 # Global variables used: $msg, $CONF_DIR, $DWN
@@ -427,7 +427,7 @@ del_oldtmp_file() {
 download() {
 	rotate_file "${CONF_DIR}/.dwn.log"
 	touch "${CONF_DIR}/.dwn.log"
-	if [ -z "${DWN}" ]; then 
+	if [ -z "${DWN}" ]; then
 		err "$(_msg "eseguibile:download_url:non_trovato")\n[${DWL_ORDER}]" "$(_msg "titolo:download")"
 		exit 1
 	fi
@@ -449,8 +449,8 @@ download() {
 #   - a sentence enclosed between left and right by 3 '*' with <font color = "red"> ... </font>
 #   - a sentence enclosed between left and right by 2 '*' with <b> ... </b>
 #   - the end of line with <br>
-# Input params: 
-#  $1: Type of window: 
+# Input params:
+#  $1: Type of window:
 #    text      : --textbox if lenght $2 > 40960 characters else --msgbox
 #    warn      : --sorry
 #    err       : --error
@@ -492,7 +492,7 @@ call_kdialog() {
 # call_zenity()
 # --------------------------
 # Description: Use zenity to view a message.
-# Input params: 
+# Input params:
 #  $1: Type of window:
 #    text      : --text-info if length $2 >= 150 else --info
 #    warn      : --warning
@@ -503,13 +503,13 @@ call_kdialog() {
 #  $2: text to display
 #  $3: title
 #  $4: detailed text to display
-# External commans used: zenity 
+# External commans used: zenity
 # Output: zenity windows
 # Return value: zenity return
 # --------------------------
 call_zenity() {
 	if [ $1 = 'text' ]; then
-		if [ ${#2} -gt 150 ]; then 
+		if [ ${#2} -gt 150 ]; then
 			echo -e "$2" | zenity --text-info --width=600 --height=500 --title="$3" 2>/dev/null
 		else
 			zenity --info --title="$3" --text="$2" 2>/dev/null
@@ -529,7 +529,7 @@ call_zenity() {
 # call_xmessage()
 # --------------------------
 # Description: Use xmessage to view a message.
-# Input params: 
+# Input params:
 #  $1: Type of window: text, warn, err, err_detail, notify, warn_yesno
 #  $2: text to display
 #  $3: for err_detail and warn_yesno is detailed info of $2
@@ -555,7 +555,7 @@ call_xmessage() {
 # call_echo()
 # --------------------------
 # Description: Use echo to view a message.
-# Input params: 
+# Input params:
 #  $1: Type of window: text, warn, warn_yesno
 #  $2: text to display
 #  $3: title (for  err_detail and warn_yesno is detailed info of $2)
@@ -572,14 +572,14 @@ call_echo() {
 	if [ -t 1 ]; then
 		t=$(echo -e "${BRed}$4${NC}\n$2" | sed -e "s/\*\*\*\(.*\)\*\*\*/\\\033[0;31m\1\\\033[0m/g" -e "s/\*\*\(.*\)\*\*/\\\033[1;37m\1\\\033[0m/g")
 		# Title
-		if [ -n "$3" ]; then 
+		if [ -n "$3" ]; then
 			if [ $1 = 'text' ]; then
 				echo -e "${BWhite}$3${NC}"
 			elif [ $1 = 'warn' ]; then
 				echo -e "${BPurple}$3${NC}"
 			elif [ $1 = 'warn_yesno' ]; then
 				echo -e "${BPurple}$3${NC}"
-			else 
+			else
 				echo -e "${BRed}$3${NC}"
 			fi
 		fi
@@ -595,12 +595,12 @@ call_echo() {
 			else
 				ret=1
 			fi
-		else 
+		else
 			echo -e "$t"
 		fi
 		echo
 	else
-		if [ -n "$1" ]; then 
+		if [ -n "$1" ]; then
 			echo -e "$3"
 		fi
 		echo -e  "$2"
@@ -610,8 +610,8 @@ call_echo() {
 # display()
 # --------------------------
 # Description: Display a text message using the right dialog message
-# Input params: 
-#  $1, ..., $n: parameters like in call_xyz function (see call_kdialog for example) 
+# Input params:
+#  $1, ..., $n: parameters like in call_xyz function (see call_kdialog for example)
 # Global variables used: XDIALOG, $out
 # Output: the dialog message
 # Return value: the return from the dialog message
@@ -626,7 +626,7 @@ display() {
 # notify()
 # --------------------------
 # Description: Display a notify message using the right dialog message
-# Input params: 
+# Input params:
 #  $1, ..., $n: parameters like in call_xyz function (see call_kdialog for example)
 # Global variables used: XDIALOG, $out
 # Output: the dialog message
@@ -643,7 +643,7 @@ notify() {
 # warn()
 # --------------------------
 # Description: Display a warn message using the right dialog message
-# Input params: 
+# Input params:
 #  $1, ..., $n: parameters like in call_xyz function (see call_kdialog for example)
 # Global variables used: XDIALOG, $out
 # Output: the dialog message
@@ -659,7 +659,7 @@ warn() {
 # err()
 # --------------------------
 # Description: Display a err message using the right dialog message
-# Input params: 
+# Input params:
 #  $1, ..., $n: parameters like in call_xyz function (see call_kdialog for example)
 # Global variables used: XDIALOG, $out
 # Output: the dialog message
@@ -675,7 +675,7 @@ err() {
 # err_detail()
 # --------------------------
 # Description: Display a err_detail message using the right dialog message
-# Input params: 
+# Input params:
 #  $1, ..., $n: parameters like in call_xyz function (see call_kdialog for example)
 # Global variables used: XDIALOG, $out
 # Output: the dialog message
@@ -691,7 +691,7 @@ err_detail() {
 # warn_yesno()
 # --------------------------
 # Description: Display a warn_yesno message using the right dialog message
-# Input params: 
+# Input params:
 #  $1, ..., $n: parameters like in call_xyz function (see call_kdialog for example)
 # Global variables used: XDIALOG, $out
 # Output: the dialog message
@@ -704,12 +704,12 @@ warn_yesno() {
 		call_echo "warn_yesno" "$1" "$3" "$2"
 	fi
 }
-	
+
 
 # opensslVerify()
 # --------------------------
 # Description: start openssl command to verify the p7m file either in smime or cms
-# Input params: 
+# Input params:
 #  $1: p7m file to verify
 #  $2: format (DER or PEM). Default to DER
 #  $3: no_out (no output like -out /dev/null 2>&1)
@@ -735,7 +735,7 @@ opensslVerify() {
 # opensslTextStruct()
 # --------------------------
 # Description: Display text info of p7m struct
-# Input params: 
+# Input params:
 #  $1: p7m file to info
 # Global variables used: $P7MTYPE
 # Output: the output of openssl command used
@@ -758,7 +758,7 @@ opensslTextStruct() {
 # getIssuerTimestamps()
 # --------------------------
 # Description: Display the serials and timestamps of the signers
-# Input params: 
+# Input params:
 #  $1: p7m file
 # Global variables used: $P7MTYPE
 # Output: For each signers display the cert's serial in the first line and the timestamp in the second line
@@ -781,7 +781,7 @@ getIssuerTimestamps() {
 # getCertsFields()
 # --------------------------
 # Description: Display the main fields of the certs of the signers
-# Input params: 
+# Input params:
 #  $1: p7m file
 # Global variables used: $P7MTYPE
 # Output: For each signers display the main cert's fields one for each line:
@@ -885,7 +885,7 @@ getnewcert() {
 # External commans used: mkdir, sed, grep, openssl, mv, rm, cat
 # Phrases key used: errore:file:conf_dir, titolo:cert, download_url:ca:attendi, download_url:ca:ok, download_url:ca:non_ok
 # Output: information messages during the download
-# Return value: 
+# Return value:
 #   0 : all ok
 #   1 : Unable to create the .p7m directory
 #   2 : Unable to download the 'CA' at this time
@@ -930,7 +930,7 @@ return 0
 # --------------------------
 # Description: Converts a p7m file encoded in base64 to standard p7m
 #    check if reverse decoded file as same md5 (base64 false positive)
-# Input params: 
+# Input params:
 #  $1: path of the file to convert
 # External commans used: mktemp, openssl
 # Output: path of the converted file
@@ -942,9 +942,9 @@ from_base64_to_p7m() {
 	# check if in base64 format to convert in original p7m
 	# base64 one line:
 	# - cat "${file_pem} # cat file as is;
-	# - sed '$ s/$/\n/'  # Add '\n' (new line) only on last line 
+	# - sed '$ s/$/\n/'  # Add '\n' (new line) only on last line
 	#                    # (some base64 don'have '\n' on last line and "read line" don't read last chars after last '\n' on the b64 file)
-	# - sed 's/\r//g'    # remove all '\r' (carriage ret) or ^M 
+	# - sed 's/\r//g'    # remove all '\r' (carriage ret) or ^M
 	# - while read line; do echo -n "$line"; done
 	#                    # read all line an output their without '\n' (all in one long line)
 	# - openssl md5 -r   # output the md5
@@ -971,13 +971,13 @@ from_base64_to_p7m() {
 # is_p7m()
 # --------------------------
 # Description: Check if the p7m file passed as a parameter is a true p7m
-# Input params: 
+# Input params:
 #  $1: path of the file to check
 # External commans used: openssl
-# Output: 
+# Output:
 #   0: all check is ok
 #   1: $1 is not a p7m file
-# Return value: 
+# Return value:
 #   0: all check is ok
 #   1: $1 is not a p7m file
 # --------------------------
@@ -1018,13 +1018,13 @@ is_p7m() {
 # getP7mType()
 # --------------------------
 # Description: Check if the p7m file passed as a parameter id smime or cms p7m type
-# Input params: 
+# Input params:
 #  $1: path of the file to check
 # External commans used: openssl
-# Output: 
+# Output:
 #   smime: smime file
 #   cms: cms file
-# Return value: 
+# Return value:
 #   0: smime or cms file
 #   1: $1 is not a p7m file
 # --------------------------
@@ -1064,7 +1064,7 @@ getP7mType() {
 # from_pem_to_der()
 # --------------------------
 # Description: Converts from PEM to DER format
-# Input params: 
+# Input params:
 #  $1: path of the file to convert
 # External commans used: mktemp, openssl
 # Output: path of the converted file
@@ -1092,7 +1092,7 @@ from_pem_to_der() {
 # verify()
 # --------------------------
 # Description: Check the correctness of the p7m file including the signatures
-# Input params: 
+# Input params:
 #  $1: path of the file to verify
 # Global variables used: $CONF_DIR
 # External commans used: openssl, sed, grep, date
@@ -1100,7 +1100,7 @@ from_pem_to_der() {
 #   openssl:verifica:ok:ok, openssl:verifica:non_ok_scaduto:ok, openssl:verifica:non_ok_scaduto:non_ok, openssl:verifica:non_ok:ok,
 #   openssl:verifica:non_ok:non_ok
 # Output: Verification status messages
-# Return value: 
+# Return value:
 #  0: p7m file is ok
 #  1: The CA is missing, download it first
 #  2: File format error
@@ -1111,8 +1111,8 @@ from_pem_to_der() {
 verify() {
 	local i idx id_utc OLD_IFS R err
 	local utc utctime verify_res now sn timestamp_readable
-	local timestamp issuer notbefore notafter subject cn cf ou 
-	local issuer_cn notbefore_ts notafter_ts 
+	local timestamp issuer notbefore notafter subject cn cf ou
+	local issuer_cn notbefore_ts notafter_ts
 	declare -a timestamps_array
 	declare -a certs_orig_array
 	declare -a utctime_array
@@ -1126,7 +1126,7 @@ verify() {
 	if [ $R = "2" ]; then
 		if [ -z "$2" ]; then
 			err_detail "$(_msg 'openssl:verifica:errore:formato')" "$err" "$(_msg 'titolo:openssl:verify')"
-		else 
+		else
 			echo "$(_msg 'openssl:verifica:errore:formato');$err"
 		fi
 		return $R
@@ -1141,7 +1141,7 @@ verify() {
 	#	negli elementi 3,8,13, ecc. (elementi 3 + 5*n) il notAfter (data di scadenza del certificato)
 	#	negli elementi 4,9,14, ecc. (elementi 4 + 5*n) il subject (Nome, cognome, CF, ecc)
 	OLD_IFS=$IFS
-	IFS=$'\n' 
+	IFS=$'\n'
 	timestamps_array=($(getIssuerTimestamps "$1"))
 	certs_orig_array=($(getCertsFields "$1"))
 	IFS=$OLD_IFS
@@ -1158,7 +1158,7 @@ verify() {
 	# verify_res: indica se 0 che le firme e i loro timestamp sono corretti; se >0 c'e' un errore
 	verify_res=0
 	now=$(date "+%s")
-	if [ ${#timestamps_array[*]} -eq 0 ]; then 
+	if [ ${#timestamps_array[*]} -eq 0 ]; then
 		verify_msg[0]="$(_msg 'openssl:verifica:timestamp:mancante')"
 		verify_res=8
 	else
@@ -1188,7 +1188,7 @@ verify() {
 			verify_res=0
 			if [ $R = "0" ]; then
 				verify_msg[$idx]="$(_msg 'openssl:verifica:ok:ok' "${cn}" "${timestamp_readable}" "${ou}" "${cf}" "${issuer_cn}" "${notbefore}" "${notafter}")"
-			
+
 			elif [ "${now}" -lt "${notbefore_ts}" -o "${now}" -gt "${notafter_ts}" ]; then
 				if [ "${timestamp}" -ge "${notbefore_ts}" -a "${timestamp}" -le "${notafter_ts}" ]; then
 					verify_msg[$idx]="$(_msg 'openssl:verifica:non_ok_scaduto:ok' "${cn}" "${timestamp_readable}" "${ou}" "${cf}" "${issuer_cn}" "${notbefore}" "${notafter}")"
@@ -1214,7 +1214,7 @@ verify() {
 # cert()
 # --------------------------
 # Description: Extract certificates from a pkcs7 file
-# Input params: 
+# Input params:
 #  $1: path of pkcs7 file
 # Global variables used: $CONF_DIR
 # External commans used: openssl
@@ -1247,7 +1247,7 @@ cert() {
 # debug_pkcs7()
 # --------------------------
 # Description: Debug with asn1parse a pkcs7 file
-# Input params: 
+# Input params:
 #  $1: path of the file to debug
 # Global variables used: $P7MTYPE
 # External commans used: openssl
@@ -1272,7 +1272,7 @@ debug_pkcs7() {
 # getxslenvs()
 # --------------------------
 # Description: Set the environment xsl_file and xsl_url based on version in $1
-# Input params: 
+# Input params:
 #  $1: the version of xsl file
 # Global variables used: $xsl_file, $xsl_url, $XSL_V12, $XSL_V12_URL, $XSL_V11, $XSL_V11_URL
 # Output: <none>
@@ -1298,9 +1298,9 @@ getxslenvs() {
 # Description: copy xsl file from $CONF_DIR to $2 dir
 #              xsl file is based on $1 version of xml (inside fattura elettronica)
 #              the xsl will be downloaded if it does not exist or if it is too old based on $CA_OLD_TIME_SEC
-# Input params: 
+# Input params:
 #  $1: version of xsl
-#  $2: dir where copy xsl file from $CONF_DIR 
+#  $2: dir where copy xsl file from $CONF_DIR
 # Global variables used: $CONF_DIR, $xsl_file, $xsl_file, $xsl_url
 # External commans used: cp
 # Phrases key used: download_url, titolo:download
@@ -1329,7 +1329,7 @@ copyxslfile() {
 # p7mplugin()
 # --------------------------
 # Description: check if $1 is a fattura elettronica file and copy the right xsl
-# Input params: 
+# Input params:
 #  $1: path of fattura elettronica file
 # Global variables used: $IS_FATTURA, $xsl_file
 # External commans used: file, grep, sed, dirname
@@ -1356,7 +1356,7 @@ p7mplugin() {
 		version=$(echo $tag_FatturaElettronica | sed -e 's/^.*versione="\([^"]*\).*$/\1/' | tr '[A-Z]' '[a-z]')
 		getxslenvs $version
 		if [ -n "$testif_xmlstylesheet" ]; then
-			# Delete the xml-stylesheet so we can add the right version 
+			# Delete the xml-stylesheet so we can add the right version
 			sed -i -r -e 's/<\?xml-stylesheet.*.xsl"\?>.*$//' -e '/^$/d' "$file"
 		fi
 		sed -i 's/\(<\([[:alnum:]]*:\)*FatturaElettronica \)/<\?xml-stylesheet type="text\/xsl" href="'$xsl_file'"\?>\1/' "$file"
@@ -1369,7 +1369,7 @@ p7mplugin() {
 # getP7mFile()
 # --------------------------
 # Description: Open dialog box (if possible) to select a p7m file if not yet present
-# Input params: 
+# Input params:
 #  $1: file p7m if already present
 # Global variables used: $out, $XDIALOG, $PWD
 # External commans used: kdialog, zenity
@@ -1393,21 +1393,21 @@ getP7mFile() {
 # getHelp()
 # --------------------------
 # Description: Display help usage message for p7m
-# Input params: 
+# Input params:
 #  $1: Message to prepend to the help usage message
 # Phrases key used: p7m:usage
 # Output: Display 'p7m:usage' phrase
 # Return value: 0
 # --------------------------
 getHelp() {
-	display "$(_msg 'p7m:usage' "$1")"	
+	display "$(_msg 'p7m:usage' "$1")"
 }
 
 # inizialize()
 # --------------------------
 # Description: Inizialize the enviroenment
 # Input params: <none>
-# Phrases key used: 
+# Phrases key used:
 # Environment variables used: CONF_DIR, L, DWN, OPEN, XDIALOG
 # Output: <none>
 # Return value: 0
@@ -1423,8 +1423,8 @@ inizialize() {
 	L=$(get_lang_message)
 	populate_msg
 	DWN=$(find_command ${DWL_ORDER})
-	OPEN=$(find_command ${OPEN_ORDER})
-	XDIALOG=$(find_command ${DIALOG_ORDER})
+	# OPEN=$(find_command ${OPEN_ORDER})
+	# XDIALOG=$(find_command ${DIALOG_ORDER})
 	return 0
 }
 
@@ -1454,7 +1454,7 @@ while getopts ":pvcdxghte" arg; do
 	  op='x'
       ;;
       g)
-	  out='g'  
+	  out='g'
       ;;
       t)
 	  op='test'
@@ -1502,7 +1502,7 @@ if [ "$op" != 'test' ]; then
 		err "$(_msg 'eseguibile:openssl:non_trovato')" "$(_msg 'it:titolo:openssl')"
 	  exit 4
 	fi
-	
+
 	declare -a out_continue_array
 	declare -a unlink_files
 	checkfile="$file"
@@ -1512,7 +1512,7 @@ if [ "$op" != 'test' ]; then
 	op_continue=1
 	op_continue_ret=0
 	op_title=''
-	if [ $(is_p7m "$checkfile") -ne 0 ]; then 
+	if [ $(is_p7m "$checkfile") -ne 0 ]; then
 		op_continue=0
 		out_continue_array[0]=$(_msg 'errore:file:ext:bad')
 	fi
@@ -1529,8 +1529,8 @@ if [ "$op" != 'test' ]; then
 		# Se necessario converto il file da PEM a DER
 		myfile=$(from_pem_to_der "$myfile_uu")
 		unlink_files+=("$myfile")
-		
-		if [ $level -eq 0 ]; then 
+
+		if [ $level -eq 0 ]; then
 			getnewcert
 		fi
 		if [ "$op" = 'v' ]; then
@@ -1582,14 +1582,14 @@ if [ "$op" != 'test' ]; then
 		indent=''
 		for (( i=$(( ${#out_continue_array[*]} -1 )); i>=0; i=$(($i-1)) )); do
 			level=$(( ${#out_continue_array[*]} -1 - $i ))
-			if [ $level -gt 0 ]; then 
+			if [ $level -gt 0 ]; then
 				indent="$indent    "
 				out_msg[$level]=$(echo -e "\n${DOWN_RIGHT_ARROW} ** livello $level **\n\n${out_continue_array[$i]}" | sed "s/^/$indent/g")"\n"
 			elif [ ${#out_continue_array[*]} -gt 1 ]; then
 				out_msg[$level]=$(echo "\n ** livello $level **\n\n${out_continue_array[$i]}")
 			else
 				out_msg[$level]=$(echo "\n${out_continue_array[$i]}")
-	
+
 			fi
 		done
 		display "${out_msg[*]}" "$(_msg ${op_title})"
@@ -1653,7 +1653,7 @@ if [ "$op" != 'test' ]; then
 		exit 0
 	elif [ -t 1 -a -n "$IS_FATTURA" ]; then
 		more "${p7m_attach}"
-	else 
+	else
 		display "$(_msg 'eseguibile:open_file:non_trovato')  '${p7m_attach}'\n[tipo: $t]"
 		exit 0
 	fi

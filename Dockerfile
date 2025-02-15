@@ -1,4 +1,5 @@
 # Main stage
+#FROM alpine:edge
 FROM alpine:3.21.2@sha256:56fa17d2a7e7f168a043a2712e63aed1f8543aeafdcee47c58dcffe38ed51099
 
 # Copy necessary files
@@ -43,7 +44,7 @@ RUN echo "@testing https://dl-cdn.alpinelinux.org/alpine/edge/main" | tee -a /et
     echo "@testing https://dl-cdn.alpinelinux.org/alpine/edge/community" | tee -a /etc/apk/repositories && \
     echo "@testing https://dl-cdn.alpinelinux.org/alpine/edge/testing" | tee -a /etc/apk/repositories && \
     apk upgrade --no-cache -a && \
-    apk add --no-cache \
+    apk add -X https://dl-cdn.alpinelinux.org/alpine/edge/testing --no-cache \
         ca-certificates \
         tzdata \
         tini \
@@ -67,9 +68,11 @@ RUN echo "@testing https://dl-cdn.alpinelinux.org/alpine/edge/main" | tee -a /et
 		py3-opencv \
 # python3/pip
         python3 \
-        py3-pip && \
-# uno unoconv and HTML
-    pip install --break-system-packages --no-cache-dir --upgrade unoconv WeasyPrint pdf2image pillow && \
+        py3-pip \
+# don't crash with "opencv: Invalid version: 'python-4.10.0'""
+        py3-unoconv py3-pillow py3-pdf2image py3-weasyprint \
+# for p7m
+        file && \
     mv /usr/share/tessdata /usr/share/tessdata-original && \
     mkdir -p $HOME /configs /logs /customFiles /pipeline/watchedFolders /pipeline/finishedFolders && \
     fc-cache -f -v && \
