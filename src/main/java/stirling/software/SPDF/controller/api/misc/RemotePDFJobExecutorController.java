@@ -46,7 +46,7 @@ public class RemotePDFJobExecutorController {
         }
 
         Path tempDir = Files.createTempDirectory("remotejob_process");
-        Path tempInputFile = tempDir.resolve("input.pdf");
+        Path tempInputFile = tempDir.resolve("input.pdf.p7m");
         Files.createDirectories(tempDir);
 
         HttpClient client = HttpClient.newHttpClient();
