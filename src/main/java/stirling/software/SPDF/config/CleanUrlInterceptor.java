@@ -23,7 +23,9 @@ public class CleanUrlInterceptor implements HandlerInterceptor {
                     "erroroauth",
                     "file",
                     "messageType",
-                    "infoMessage");
+                    "infoMessage",
+                    "url",
+                    "job");
 
     @Override
     public boolean preHandle(
